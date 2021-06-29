@@ -1,0 +1,17 @@
+***************************************************
+*        d20 Character Generator Version 3        *
+*                 by: Kevin O'Brien               *
+*                                                 *
+*  Please do not copy without written permission  *
+***************************************************
+
+
+This a redone version of my SeniorSeminar repository.
+This version incorporates a more well-defined character class and racial component to character generation.
+
+**June 29,2021**
+STARTING WITH DUNGEONS AND DRAGONS
+Includes the racial bonuses to ability scores.
+Includes the 12 base classes for Dungeons and Dragons.
+Includes 8 of the 9 base races for the regular version of Dungeons and Dragons.
+
