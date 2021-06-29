@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.DnD.sumController">
+   <children>
+      <ImageView fitHeight="85.0" fitWidth="600.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../pictures/DnDfullTitle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgChar" fitHeight="230.0" fitWidth="200.0" layoutX="14.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox layoutX="221.0" layoutY="110.0" prefHeight="200.0" prefWidth="60.0" spacing="14.0">
+         <children>
+            <Label text="STR" />
+            <Label text="DEX" />
+            <Label text="CON" />
+            <Label text="INT" />
+            <Label text="WIS" />
+            <Label text="CHA" />
+         </children>
+      </VBox>
+      <VBox layoutX="274.0" layoutY="110.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <TextField fx:id="tfStr" />
+            <TextField fx:id="tfDex" />
+            <TextField fx:id="tfCon" />
+            <TextField fx:id="tfInt" />
+            <TextField fx:id="tfWis" />
+            <TextField fx:id="tfCha" />
+         </children>
+      </VBox>
+      <TextArea fx:id="taDesc" layoutX="436.0" layoutY="110.0" prefHeight="200.0" prefWidth="150.0" />
+      <Label layoutX="237.0" layoutY="72.0" text="Character Summary">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAccept" layoutX="114.0" layoutY="340.0" mnemonicParsing="false" text="Accept" />
+      <Button fx:id="btnReset" layoutX="434.0" layoutY="340.0" mnemonicParsing="false" text="Reset" />
+      <VBox layoutX="374.0" layoutY="110.0" prefHeight="200.0" prefWidth="34.0" spacing="14.0">
+         <children>
+            <RadioButton fx:id="rbStr1" mnemonicParsing="false">
+               <toggleGroup>
+                  <ToggleGroup fx:id="bonusGroup1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDex1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
+            <RadioButton fx:id="rbCon1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
+            <RadioButton fx:id="rbInt1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
+            <RadioButton fx:id="rbWis1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
+            <RadioButton fx:id="rbCha1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
+         </children>
+      </VBox>
+      <VBox layoutX="401.0" layoutY="110.0" prefHeight="200.0" prefWidth="34.0" spacing="14.0">
+         <children>
+            <RadioButton fx:id="rbStr2" mnemonicParsing="false">
+               <toggleGroup>
+                  <ToggleGroup fx:id="bonusGroup2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbDex2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
+            <RadioButton fx:id="rbCon2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
+            <RadioButton fx:id="rbInt2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
+            <RadioButton fx:id="rbWis2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
+            <RadioButton fx:id="rbCha2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
+         </children>
+      </VBox>
+      <TextField fx:id="tfBonus" layoutX="250.0" layoutY="328.0" />
+   </children>
+</AnchorPane>
