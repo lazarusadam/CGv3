@@ -44,7 +44,18 @@ public class sumController {
         }
 
         switch (race){
-            case "Dwarf":{}
+            case "Dwarf":{
+                tfBonus.setText("Constitution +2");
+                con = con+2;
+                tfStr.setText(Integer.toString(str));
+                tfDex.setText(Integer.toString(dex));
+                tfCon.setText(Integer.toString(con));
+                tfInt.setText(Integer.toString(intel));
+                tfWis.setText(Integer.toString(wis));
+                tfCha.setText(Integer.toString(cha));
+                break;
+
+            }
             case "Elf":{}
             case "Halfling":{}
             case "Human":{}
