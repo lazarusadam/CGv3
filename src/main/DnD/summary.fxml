@@ -2,10 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -40,7 +38,7 @@
             <TextField fx:id="tfCha" />
          </children>
       </VBox>
-      <TextArea fx:id="taDesc" layoutX="436.0" layoutY="110.0" prefHeight="200.0" prefWidth="150.0" />
+      <TextArea fx:id="taDesc" layoutX="400.0" layoutY="110.0" prefHeight="200.0" prefWidth="185.0" />
       <Label layoutX="237.0" layoutY="72.0" text="Character Summary">
          <font>
             <Font size="20.0" />
@@ -48,34 +46,6 @@
       </Label>
       <Button fx:id="btnAccept" layoutX="114.0" layoutY="340.0" mnemonicParsing="false" text="Accept" />
       <Button fx:id="btnReset" layoutX="434.0" layoutY="340.0" mnemonicParsing="false" text="Reset" />
-      <VBox layoutX="374.0" layoutY="110.0" prefHeight="200.0" prefWidth="34.0" spacing="14.0">
-         <children>
-            <RadioButton fx:id="rbStr1" mnemonicParsing="false">
-               <toggleGroup>
-                  <ToggleGroup fx:id="bonusGroup1" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="rbDex1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
-            <RadioButton fx:id="rbCon1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
-            <RadioButton fx:id="rbInt1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
-            <RadioButton fx:id="rbWis1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
-            <RadioButton fx:id="rbCha1" mnemonicParsing="false" toggleGroup="$bonusGroup1" />
-         </children>
-      </VBox>
-      <VBox layoutX="401.0" layoutY="110.0" prefHeight="200.0" prefWidth="34.0" spacing="14.0">
-         <children>
-            <RadioButton fx:id="rbStr2" mnemonicParsing="false">
-               <toggleGroup>
-                  <ToggleGroup fx:id="bonusGroup2" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="rbDex2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
-            <RadioButton fx:id="rbCon2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
-            <RadioButton fx:id="rbInt2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
-            <RadioButton fx:id="rbWis2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
-            <RadioButton fx:id="rbCha2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
-         </children>
-      </VBox>
       <TextField fx:id="tfBonus" alignment="CENTER" layoutX="225.0" layoutY="337.0" prefHeight="26.0" prefWidth="174.0" />
       <Label layoutX="278.0" layoutY="319.0" text="Racial Bonus" />
    </children>

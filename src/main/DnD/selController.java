@@ -163,18 +163,36 @@ public class selController extends Application {
             final Stage stage = (Stage) btnAccept.getScene().getWindow();
             stage.close();
         }
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("summary.fxml"));
-        Parent summaryScene = (Parent) loader.load();
+        if (cClass.equals("Half Elf")){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("heBonus.fxml"));
+            Parent heScene = (Parent) loader.load();
 
-        sumController sumControl = loader.getController();
-        sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
+            heBonus bonusControl = loader.getController();
+            bonusControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
 
-        final Stage stage = new Stage();
-        stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-        stage.setTitle(name + " Character Summary");
-        stage.setHeight(425);  stage.setWidth(600);
-        stage.setScene(new Scene(summaryScene));
-        stage.show();
+            final Stage stage = new Stage();
+            stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
+            stage.setHeight(180);
+            stage.setWidth(600);
+            stage.setScene(new Scene(heScene));
+            stage.show();
+        }
+        else {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("summary.fxml"));
+            Parent summaryScene = (Parent) loader.load();
+
+            sumController sumControl = loader.getController();
+            sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
+
+            final Stage stage = new Stage();
+            stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
+            stage.setTitle(name + " Character Summary");
+            stage.setHeight(425);
+            stage.setWidth(600);
+            stage.setScene(new Scene(summaryScene));
+            stage.show();
+        }
 
 
     }
