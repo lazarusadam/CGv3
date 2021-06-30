@@ -195,7 +195,7 @@ public class selController extends Application {
         if (checkToggles()) {
             btnAccept.setDisable(false);
         } else {
-            JOptionPane.showMessageDialog(null, "You cannot use the same score for multiple scores","Title", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog(null, "You cannot use the same score for multiple scores","Error", JOptionPane.ERROR_MESSAGE );
             btnAccept.setDisable(true);
         }
     }

@@ -76,6 +76,7 @@
             <RadioButton fx:id="rbCha2" mnemonicParsing="false" toggleGroup="$bonusGroup2" />
          </children>
       </VBox>
-      <TextField fx:id="tfBonus" layoutX="250.0" layoutY="328.0" />
+      <TextField fx:id="tfBonus" layoutX="250.0" layoutY="337.0" />
+      <Label layoutX="290.0" layoutY="319.0" text="Racial Bonus" />
    </children>
 </AnchorPane>
