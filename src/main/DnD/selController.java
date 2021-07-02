@@ -163,7 +163,7 @@ public class selController extends Application {
             final Stage stage = (Stage) btnAccept.getScene().getWindow();
             stage.close();
         }
-        if (cClass.equals("Half Elf")){
+        if (race.equals("Half Elf")){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("heBonus.fxml"));
             Parent heScene = (Parent) loader.load();
 
@@ -172,7 +172,7 @@ public class selController extends Application {
 
             final Stage stage = new Stage();
             stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-            stage.setHeight(180);
+            stage.setHeight(200);
             stage.setWidth(600);
             stage.setScene(new Scene(heScene));
             stage.show();
@@ -208,29 +208,8 @@ public class selController extends Application {
         btnAccept.setDisable(true);
     }
 
-    public void setScores(ActionEvent actionEvent) throws IOException {
-
-
-
-        if (checkToggles()) {
-        /*    boolean heCheck = true;
-            String race = cbRace.getSelectionModel().getSelectedItem().toString();
-            if (race.equals("Half Elf")){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("heBonus.fxml"));
-                Parent heScene = (Parent) loader.load();
-
-                heBonus bonusControl = loader.getController();
-                bonusControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
-
-                final Stage stage = new Stage();
-                stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-                stage.setHeight(180);
-                stage.setWidth(600);
-                stage.setScene(new Scene(heScene));
-                stage.show();
-            }*/
-
-
+    public void setScores(ActionEvent actionEvent) {
+    if (checkToggles()) {
             btnAccept.setDisable(false);
         } else {
             JOptionPane.showMessageDialog(null, "You cannot use the same score for multiple scores","Error", JOptionPane.ERROR_MESSAGE );

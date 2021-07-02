@@ -18,6 +18,7 @@ public class heBonus {
     public ChoiceBox cbBonus1;
     public ChoiceBox cbBonus2;
     public Button btnAccept;
+    public Button btnCheck;
     ArrayList<String> scores =
             new ArrayList<>(Arrays.asList("Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom"));
     int str, dex, con, intel, wis, cha;
@@ -31,18 +32,16 @@ public class heBonus {
     this.dex = dex; this.wis = wis;
     this.con = con; this.cha = cha;
     this.name = name; this.race = race; this.cClass = cClass;
+    btnAccept.setDisable(true);
     }
 
     public void acceptClicked(ActionEvent actionEvent) throws IOException {
-    boolean different = true;
+
     String bonus1 = cbBonus1.getSelectionModel().getSelectedItem().toString();
     String bonus2 = cbBonus2.getSelectionModel().getSelectedItem().toString();
-    different = difCheck(bonus1, bonus2);
-    while (!different){
-        JOptionPane.showMessageDialog(null, "Bonuses must be in different scores", "Bonus Conflict", JOptionPane.ERROR_MESSAGE);
-        acceptClicked(actionEvent);
-        different = difCheck(bonus1, bonus2);
-        }
+    String eventHandler;
+
+
     switch (bonus1){
         case "Strength" -> str = str + 1;
         case "Dexterity" -> dex = dex + 1;
@@ -57,6 +56,13 @@ public class heBonus {
         case "Intelligence" -> intel = intel + 1;
         case "Wisdom" -> wis = wis + 1;
     }
+
+        eventHandler = actionEvent.getEventType().toString();
+        if ("ACTION".equals(eventHandler)){
+            final Stage stage = (Stage) btnAccept.getScene().getWindow();
+            stage.close();
+        }
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("summary.fxml"));
         Parent summaryScene = (Parent) loader.load();
 
@@ -74,5 +80,19 @@ public class heBonus {
 
     private boolean difCheck(String bonus1, String bonus2) {
     return !bonus1.equals(bonus2);
+    }
+
+    public void checkClicked(ActionEvent actionEvent) {
+        boolean different = true;
+        String bonus1 = cbBonus1.getSelectionModel().getSelectedItem().toString();
+        String bonus2 = cbBonus2.getSelectionModel().getSelectedItem().toString();
+        different = difCheck(bonus1, bonus2);
+        if (different){
+            btnAccept.setDisable(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Bonuses must be applied to different scores", "Application Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }
 }
