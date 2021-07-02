@@ -97,7 +97,6 @@ public class sumController {
 
                 tfBonus.setText("Charisma + 2.  Two others + 1");
                 cha = cha + 2;
-
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));

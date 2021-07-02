@@ -12,7 +12,7 @@
          <children>
             <ChoiceBox fx:id="cbBonus1" layoutX="59.0" layoutY="79.0" prefWidth="150.0" AnchorPane.leftAnchor="60.0" />
             <ChoiceBox fx:id="cbBonus2" layoutX="354.0" layoutY="79.0" prefWidth="150.0" AnchorPane.rightAnchor="60.0" />
-            <Button fx:id="btnAccept" layoutX="261.0" layoutY="105.0" mnemonicParsing="false" text="Accept" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" />
+            <Button fx:id="btnAccept" layoutX="261.0" layoutY="105.0" mnemonicParsing="false" onAction="#acceptClicked" text="Accept" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" />
             <Label alignment="CENTER" layoutX="147.0" layoutY="45.0" text="Please select two different scores to apply a +1 bonus to " />
             <Label layoutX="99.0" layoutY="27.0" text="Having chosen Half-Elf for your race, you get a +1 to two additional ability scores" />
          </children></AnchorPane>
