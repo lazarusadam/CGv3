@@ -106,6 +106,8 @@ public class sumController {
                 break;
             }
             case "Half Orc": {
+                tfBonus.setText("Strength + 2.  Constitution + 1");
+                str = str+2; con = con+1;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -115,6 +117,8 @@ public class sumController {
                 break;
             }
             case "Tiefling":{
+                tfBonus.setText("Charisma + 2.  Intelligence + 1");
+                cha = cha+2; intel = intel+1;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
