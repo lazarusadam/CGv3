@@ -172,7 +172,7 @@ public class selController extends Application {
 
             final Stage stage = new Stage();
             stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-            stage.setHeight(200);
+            stage.setHeight(225);
             stage.setWidth(600);
             stage.setScene(new Scene(heScene));
             stage.show();
