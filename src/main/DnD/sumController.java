@@ -25,7 +25,6 @@ public class sumController {
         String rcLong = race + " " + cClass;
 
         switch (rcLong) {
-            case "Dwarf Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/dwarfbarbarian.jpg"));
             case "Elf Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/elfbarb.jpg"));
             case "Halfling Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/halfbarb.jpg"));
             case "Human Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/humanbarbarian.png"));
@@ -37,6 +36,20 @@ public class sumController {
 
         switch (race){
             case "Dwarf":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/dwarfbarbarian.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image("main/DnD/dndPictures/bards/dwarfbard.jpg"));
+                    case "Cleric"->imgChar.setImage(new Image("main/DnD/dndPictures/clerics/DwarfCleric.jpg"));
+                    case "Druid"->imgChar.setImage(new Image("main/DnD/dndPictures/druids/dwarfdruid.jpg"));
+                    case "Monk"->imgChar.setImage(new Image("main/DnD/dndPictures/monks/dwarfmonk.jpg"));
+                    case "Rogue"->imgChar.setImage(new Image("main/DnD/dndPictures/rogues/dwarfrogue.jpg"));
+                    case "Warlock"->imgChar.setImage(new Image("main/DnD/dndPictures/warlocks/dwarflock.jpg"));
+                    case "Fighter"->imgChar.setImage(new Image("main/DnD/dndPictures/fighters/dwarffighter.jpg"));
+                    case "Paladin"->imgChar.setImage(new Image("main/DnD/dndPictures/paladins/dwarfpaladin.png"));
+                    case "Ranger"->imgChar.setImage(new Image("main/DnD/dndPictures/rangers/dwarfranger.png"));
+                    case "Sorcerer"->imgChar.setImage(new Image("main/DnD/dndPictures/sorcerers/dwarfsorc.jpg"));
+                    case "Wizard"->imgChar.setImage(new Image("main/DnD/dndPictures/wizards/dwarfwiz.png"));
+                }
                 tfBonus.setText("Constitution + 2");
                 con = con+2;
                 tfStr.setText(Integer.toString(str));
