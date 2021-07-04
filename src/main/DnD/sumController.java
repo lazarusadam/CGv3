@@ -22,18 +22,6 @@ public class sumController {
 
 
     public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass) {
-        String rcLong = race + " " + cClass;
-
-        switch (rcLong) {
-            case "Elf Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/elfbarb.jpg"));
-            case "Halfling Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/halfbarb.jpg"));
-            case "Human Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/humanbarbarian.png"));
-            case "Gnome Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/gnomebarb.jpg"));
-            case "Half Elf Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/hebarb.jpg"));
-            case "Half Orc Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/hobarb.jpg"));
-            case "Tiefling Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/Tieflingbarb.jpg"));
-        }
-
         switch (race){
             case "Dwarf":{
                 switch (cClass){
@@ -61,6 +49,20 @@ public class sumController {
                 break;
             }
             case "Elf":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/elfbarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
                 tfStr.setText(Integer.toString(str));
@@ -73,6 +75,20 @@ public class sumController {
 
             }
             case "Halfling":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/halfbarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
                 tfStr.setText(Integer.toString(str));
@@ -84,6 +100,20 @@ public class sumController {
                 break;
             }
             case "Human":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/humanbarbarian.png"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("All stats + 1");
                 str = str+1; dex = dex+1; con = con+1;
                 intel = intel+1; wis = wis+1; cha = cha+1;
@@ -96,6 +126,20 @@ public class sumController {
                 break;
             }
             case "Gnome":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/gnomebarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Intelligence + 2");
                 intel = intel+2;
                 tfStr.setText(Integer.toString(str));
@@ -107,7 +151,20 @@ public class sumController {
                 break;
             }
             case "Half Elf":{
-
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/hebarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Charisma + 2.  Two others + 1");
                 cha = cha + 2;
                 tfStr.setText(Integer.toString(str));
@@ -119,6 +176,20 @@ public class sumController {
                 break;
             }
             case "Half Orc": {
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/hobarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Strength + 2.  Constitution + 1");
                 str = str+2; con = con+1;
                 tfStr.setText(Integer.toString(str));
@@ -130,6 +201,20 @@ public class sumController {
                 break;
             }
             case "Tiefling":{
+                switch (cClass){
+                    case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/Tieflingbarb.jpg"));
+                    case "Bard" ->imgChar.setImage(new Image());
+                    case "Cleric"->imgChar.setImage(new Image());
+                    case "Druid"->imgChar.setImage(new Image());
+                    case "Monk"->imgChar.setImage(new Image());
+                    case "Rogue"->imgChar.setImage(new Image());
+                    case "Warlock"->imgChar.setImage(new Image());
+                    case "Fighter"->imgChar.setImage(new Image());
+                    case "Paladin"->imgChar.setImage(new Image());
+                    case "Ranger"->imgChar.setImage(new Image());
+                    case "Sorcerer"->imgChar.setImage(new Image());
+                    case "Wizard"->imgChar.setImage(new Image());
+                }
                 tfBonus.setText("Charisma + 2.  Intelligence + 1");
                 cha = cha+2; intel = intel+1;
                 tfStr.setText(Integer.toString(str));
