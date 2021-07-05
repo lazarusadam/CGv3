@@ -51,17 +51,17 @@ public class sumController {
             case "Elf":{
                 switch (cClass){
                     case "Barbarian" -> imgChar.setImage(new Image("main/DnD/dndPictures/barbarians/elfbarb.jpg"));
-                    case "Bard" ->imgChar.setImage(new Image());
-                    case "Cleric"->imgChar.setImage(new Image());
-                    case "Druid"->imgChar.setImage(new Image());
-                    case "Monk"->imgChar.setImage(new Image());
-                    case "Rogue"->imgChar.setImage(new Image());
-                    case "Warlock"->imgChar.setImage(new Image());
-                    case "Fighter"->imgChar.setImage(new Image());
-                    case "Paladin"->imgChar.setImage(new Image());
-                    case "Ranger"->imgChar.setImage(new Image());
-                    case "Sorcerer"->imgChar.setImage(new Image());
-                    case "Wizard"->imgChar.setImage(new Image());
+                    case "Bard" ->imgChar.setImage(new Image("main/DnD/dndPictures/bards/elfbard.jpg"));
+                    case "Cleric"->imgChar.setImage(new Image("main/DnD/dndPictures/clerics/elfcleric.jpg"));
+                    case "Druid"->imgChar.setImage(new Image("main/DnD/dndPictures/druids/elfdruid.jpg"));
+                    case "Monk"->imgChar.setImage(new Image("main/DnD/dndPictures/monks/elfmonk.jpg"));
+                    case "Rogue"->imgChar.setImage(new Image("main/DnD/dndPictures/rogues/elfrogue.jpg"));
+                    case "Warlock"->imgChar.setImage(new Image("main/DnD/dndPictures/warlocks/elflock.jpg"));
+                    case "Fighter"->imgChar.setImage(new Image("main/DnD/dndPictures/fighters/elffighter.png"));
+                    case "Paladin"->imgChar.setImage(new Image("main/DnD/dndPictures/paladins/elfpaladin.png"));
+                    case "Ranger"->imgChar.setImage(new Image("main/DnD/dndPictures/rangers/elfranger.jpg"));
+                    case "Sorcerer"->imgChar.setImage(new Image("main/DnD/dndPictures/sorcerers/elfsorc.jpg"));
+                    case "Wizard"->imgChar.setImage(new Image("main/DnD/dndPictures/wizards/elfwiz.png"));
                 }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
