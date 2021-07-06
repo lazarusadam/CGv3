@@ -8,8 +8,16 @@
 
 This a redone version of my SeniorSeminar repository.
 This version incorporates a more well-defined character class and racial component to character generation.
+Uses Dungeons and Dragons and Pathfinder as primary gaming sources.  All information about racial and class 
+characteristics can be found in the Dungeons and Dragons 5e Player's Handbook and Pathfinder 2nd Edition Core
+Rulebook.  Also uses current version of the standard character sheets.
 
-**June 29,2021**
+Copyright their representative publishers.
+
+
+Update listing
+-----------------------------------------------------------------------------------------------------------
+**June 29, 2021**
 STARTING WITH DUNGEONS AND DRAGONS
 Includes the racial bonuses to ability scores.
 Includes the 12 base classes for Dungeons and Dragons.
@@ -19,3 +27,9 @@ Includes 8 of the 9 base races for the regular version of Dungeons and Dragons.
 CONTINUING WITH DUNGEONS AND DRAGONS
 All racial bonuses to ability scores implemented
 Currently adding representative pictures for each race/class combination.
+
+**July 5, 2021**
+CONTINUING WITH DUNGEONS AND DRAGONS
+Currently working on representative pictures.
+All Barbarian combinations are complete.  (Was used as test case for representative picture function.)
+Finished with Dwarf and Elf representations.
