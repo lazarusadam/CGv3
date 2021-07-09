@@ -237,7 +237,6 @@ public class sumController {
                         "\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
                 taDesc.setText(description);
-
             }
 
             case "Bard":{}
