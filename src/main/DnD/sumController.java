@@ -229,7 +229,7 @@ public class sumController {
                 Barbarian barb = new Barbarian();
                 barb.setHP(con);
                 Integer hp = barb.getHP();
-                taDesc.setText("Starting Hit Points: "+ hp +"\nAbilities:\n" +
+                taDesc.setText("Class Information:\n--------------------\nStarting Hit Points: "+ hp +"\nAbilities:\n" +
                         "Rage: 2\n Rage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex));
 
