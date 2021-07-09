@@ -17,6 +17,8 @@ public class sumController {
     public ImageView imgChar;
     public TextField tfBonus;
 
+    String description = "";
+
 
 
     public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass) {
@@ -38,6 +40,8 @@ public class sumController {
                 }
                 tfBonus.setText("Constitution + 2");
                 con = con+2;
+                description = description + "Racial Information:\n--------------------\nDarkvision: 60'\n" +
+                        "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -229,9 +233,10 @@ public class sumController {
                 Barbarian barb = new Barbarian();
                 barb.setHP(con);
                 Integer hp = barb.getHP();
-                taDesc.setText("Class Information:\n--------------------\nStarting Hit Points: "+ hp +"\nAbilities:\n" +
-                        "Rage: 2\n Rage Dmg Bonus: +2\n" +
-                        "Unarmored Combat AC: " + barb.unarmoredAC(con, dex));
+                description = description + "Class Information:\n--------------------\nStarting Hit Points: "+ hp +
+                        "\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
+                        "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
+                taDesc.setText(description);
 
             }
 
