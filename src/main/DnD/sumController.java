@@ -40,7 +40,7 @@ public class sumController {
                 }
                 tfBonus.setText("Constitution + 2");
                 con = con+2;
-                description = description + "Racial Information:\n--------------------\nDarkvision: 60'\n" +
+                description = description + "Racial Information\n--------------------\nDarkvision: 60'\n" +
                         "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -67,6 +67,7 @@ public class sumController {
                 }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
+                description = description + "Racial Information\n--------------------\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -79,13 +80,13 @@ public class sumController {
             case "Halfling":{
                 switch (cClass){
                     case "Barbarian" -> imgChar.setImage(new Image("main/DnD/classPics/barbarians/halfbarb.jpg"));
-                    case "Bard" ->imgChar.setImage(new Image(""));
-                    case "Cleric"->imgChar.setImage(new Image(""));
-                    case "Druid"->imgChar.setImage(new Image(""));
-                    case "Monk"->imgChar.setImage(new Image(""));
+                    case "Bard" ->imgChar.setImage(new Image("main/DnD/classPics/bards/halfbard.jpg"));
+                    case "Cleric"->imgChar.setImage(new Image("main/DnD/classPics/clerics/halfcleric.jpg"));
+                    case "Druid"->imgChar.setImage(new Image("main/DnD/classPics/druids/halfdruid.png"));
+                    case "Monk"->imgChar.setImage(new Image("main/DnD/classPics/monks/halfmonk.jpg"));
                     case "Rogue"->imgChar.setImage(new Image(""));
                     case "Warlock"->imgChar.setImage(new Image(""));
-                    case "Fighter"->imgChar.setImage(new Image(""));
+                    case "Fighter"->imgChar.setImage(new Image("main/DnD/classPics/fighters/halffighter.jpg"));
                     case "Paladin"->imgChar.setImage(new Image(""));
                     case "Ranger"->imgChar.setImage(new Image(""));
                     case "Sorcerer"->imgChar.setImage(new Image(""));
@@ -239,7 +240,13 @@ public class sumController {
                 taDesc.setText(description);
             }
 
-            case "Bard":{}
+            case "Bard":{
+                BCDMRW bard = new BCDMRW();
+                bard.setHP(con);
+                Integer hp = bard.getHP();
+                description = description + "Class information\n--------------------\n";
+                taDesc.setText(description);
+            }
             case "Cleric":{}
             case "Druid":{}
             case "Monk":{}
