@@ -84,16 +84,17 @@ public class sumController {
                     case "Cleric"->imgChar.setImage(new Image("main/DnD/classPics/clerics/halfcleric.jpg"));
                     case "Druid"->imgChar.setImage(new Image("main/DnD/classPics/druids/halfdruid.png"));
                     case "Monk"->imgChar.setImage(new Image("main/DnD/classPics/monks/halfmonk.jpg"));
-                    case "Rogue"->imgChar.setImage(new Image(""));
-                    case "Warlock"->imgChar.setImage(new Image(""));
+                    case "Rogue"->imgChar.setImage(new Image("main/DnD/classPics/rogues/halfrogue.jpg"));
+                    case "Warlock"->imgChar.setImage(new Image("main/DnD/classPics/warlocks/halflock.jpg"));
                     case "Fighter"->imgChar.setImage(new Image("main/DnD/classPics/fighters/halffighter.jpg"));
-                    case "Paladin"->imgChar.setImage(new Image(""));
-                    case "Ranger"->imgChar.setImage(new Image(""));
-                    case "Sorcerer"->imgChar.setImage(new Image(""));
-                    case "Wizard"->imgChar.setImage(new Image(""));
+                    case "Paladin"->imgChar.setImage(new Image("main/DnD/classPics/paladins/halfpaladin.jpg"));
+                    case "Ranger"->imgChar.setImage(new Image("main/DnD/classPics/rangers/halfranger.jpg"));
+                    case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/halfsorc.png"));
+                    case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/halfwizard.jpg"));
                 }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
+                description = description + "Racial Information\n---------------------\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
