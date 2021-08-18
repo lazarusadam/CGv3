@@ -182,17 +182,17 @@ public class sumController {
             case "Half Orc": {
                 switch (cClass){
                     case "Barbarian" -> imgChar.setImage(new Image("main/DnD/classPics/barbarians/hobarb.jpg"));
-                    case "Bard" ->imgChar.setImage(new Image(""));
-                    case "Cleric"->imgChar.setImage(new Image(""));
-                    case "Druid"->imgChar.setImage(new Image(""));
-                    case "Monk"->imgChar.setImage(new Image(""));
-                    case "Rogue"->imgChar.setImage(new Image(""));
-                    case "Warlock"->imgChar.setImage(new Image(""));
-                    case "Fighter"->imgChar.setImage(new Image(""));
-                    case "Paladin"->imgChar.setImage(new Image(""));
-                    case "Ranger"->imgChar.setImage(new Image(""));
-                    case "Sorcerer"->imgChar.setImage(new Image(""));
-                    case "Wizard"->imgChar.setImage(new Image(""));
+                    case "Bard" ->imgChar.setImage(new Image("main/DnD/classPics/bards/hobard.jpg"));
+                    case "Cleric"->imgChar.setImage(new Image("main/DnD/classPics/clerics/hocleric.jpg"));
+                    case "Druid"->imgChar.setImage(new Image("main/DnD/classPics/druids/hodruid.jpg"));
+                    case "Monk"->imgChar.setImage(new Image("main/DnD/classPics/monks/homonk.jpg"));
+                    case "Rogue"->imgChar.setImage(new Image("main/DnD/classPics/rogues/horogue.png"));
+                    case "Warlock"->imgChar.setImage(new Image("main/DnD/classPics/warlocks/holock.png"));
+                    case "Fighter"->imgChar.setImage(new Image("main/DnD/classPics/fighters/hofighter.jpg"));
+                    case "Paladin"->imgChar.setImage(new Image("main/DnD/classPics/paladins/hopaladin.jpg"));
+                    case "Ranger"->imgChar.setImage(new Image("main/DnD/classPics/rangers/horanger.png"));
+                    case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/hosorc.png"));
+                    case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/howizard.jpg"));
                 }
                 tfBonus.setText("Strength + 2.  Constitution + 1");
                 str = str+2; con = con+1;
