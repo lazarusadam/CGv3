@@ -154,8 +154,18 @@ public class BCDMRW implements ClassArchetype {
 
     }
 
+    /* Bardic Inspiration */
+    /* Charisma is the key stat for bards.
+       This stat modifier shows how many ispiration dice
+       a bard has to spread amongst the party each day */
     public Integer getInsp(int cha) {
-        Integer insp = 0;
-        return insp;
+        return switch (cha) {
+            case 12, 13 -> 1;
+            case 14, 15 -> 2;
+            case 16, 17 -> 3;
+            case 18, 19 -> 4;
+            case 20 -> 5;
+            default -> 0;
+        };
     }
 }

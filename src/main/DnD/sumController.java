@@ -41,7 +41,7 @@ public class sumController {
                 tfBonus.setText("Constitution + 2");
                 con = con+2;
                 description = description + "Racial Information\n--------------------\nDarkvision: 60'\n" +
-                        "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n";
+                        "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -68,7 +68,7 @@ public class sumController {
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
                 description = description + "Racial Information\n--------------------\nDarkvision: 60'\n"+
-                "Bonus to Save vs. Charm\nCannot be slept\nMeditate instead of sleep\n";
+                "Bonus to Save vs. Charm\nCannot be slept\nMeditate instead of sleep\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -236,8 +236,8 @@ public class sumController {
                 Barbarian barb = new Barbarian();
                 barb.setHP(con);
                 Integer hp = barb.getHP();
-                description = description + "Class Information:\n--------------------\nStarting Hit Points: "+ hp +
-                        "\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
+                description = description + "Class Information:\n--------------------\nPrimary Stat: Strength\n" +
+                        "Starting Hit Points: "+ hp + "\n\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
                 taDesc.setText(description);
                 break;
@@ -245,16 +245,24 @@ public class sumController {
 
             case "Bard":{
                 BCDMRW bard = new BCDMRW();
-
-                    bard.setHP(con);
-                    Integer hp = bard.getHP();
-                    Integer insp = bard.getInsp(cha);
-                    description = description + "Class information\n--------------------\nStarting Hit Points: " + hp +
-                            "\nAbilities:\nBardic Inspiration: --Spellcasting--\n";
-                    taDesc.setText(description);
-
+                bard.setHP(con);
+                Integer hp = bard.getHP();
+                Integer insp = bard.getInsp(cha);
+                description = description + "Class Information\n--------------------\nPrimary Stat: Charisma\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\nBardic Inspiration: " + insp + " 1d6/day\n--Spellcasting--\n" +
+                        "2 Cantrips & 4 Spells Known\n 2 1st Level Slots";
+                taDesc.setText(description);
+                break;
             }
-            case "Cleric":{}
+            case "Cleric":{
+                BCDMRW cleric = new BCDMRW();
+                cleric.setHP(con);
+                Integer hp = cleric.getHP();
+                description = description + "Class Information\n--------------------\nPrimary Stat: Wisdom\n" +
+                    "Starting Hit Points: " + hp + "\nAbilities:\n";
+                taDesc.setText(description);
+                break;
+            }
             case "Druid":{}
             case "Monk":{}
             case "Rogue":{}
