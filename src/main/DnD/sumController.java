@@ -67,7 +67,8 @@ public class sumController {
                 }
                 tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
-                description = description + "Racial Information\n--------------------\n";
+                description = description + "Racial Information\n--------------------\nDarkvision: 60'\n"+
+                "Bonus to Save vs. Charm\nCannot be slept\nMeditate instead of sleep\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -207,17 +208,17 @@ public class sumController {
             case "Tiefling":{
                 switch (cClass){
                     case "Barbarian" -> imgChar.setImage(new Image("main/DnD/classPics/barbarians/Tieflingbarb.jpg"));
-                    case "Bard" ->imgChar.setImage(new Image(""));
-                    case "Cleric"->imgChar.setImage(new Image(""));
-                    case "Druid"->imgChar.setImage(new Image(""));
-                    case "Monk"->imgChar.setImage(new Image(""));
-                    case "Rogue"->imgChar.setImage(new Image(""));
-                    case "Warlock"->imgChar.setImage(new Image(""));
-                    case "Fighter"->imgChar.setImage(new Image(""));
-                    case "Paladin"->imgChar.setImage(new Image(""));
-                    case "Ranger"->imgChar.setImage(new Image(""));
-                    case "Sorcerer"->imgChar.setImage(new Image(""));
-                    case "Wizard"->imgChar.setImage(new Image(""));
+                    case "Bard" ->imgChar.setImage(new Image("main/DnD/classPics/bards/tieflingbard.jpg"));
+                    case "Cleric"->imgChar.setImage(new Image("main/DnD/classPics/clerics/tieflingcleric.png"));
+                    case "Druid"->imgChar.setImage(new Image("main/DnD/classPics/druids/tieflingdruid.png"));
+                    case "Monk"->imgChar.setImage(new Image("main/DnD/classPics/monks/tieflingmonk.png"));
+                    case "Rogue"->imgChar.setImage(new Image("main/DnD/classPics/rogues/tieflingrogue.jpg"));
+                    case "Warlock"->imgChar.setImage(new Image("main/DnD/classPics/warlocks/tieflinglock.png"));
+                    case "Fighter"->imgChar.setImage(new Image("main/DnD/classPics/fighters/tieflingfighter.jpg"));
+                    case "Paladin"->imgChar.setImage(new Image("main/DnD/classPics/paladins/tieflingpaladin.jpg"));
+                    case "Ranger"->imgChar.setImage(new Image("main/DnD/classPics/rangers/tieflingranger.jpg"));
+                    case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/tieflingsorc.png"));
+                    case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/tieflingwizard.jpg"));
                 }
                 tfBonus.setText("Charisma + 2.  Intelligence + 1");
                 cha = cha+2; intel = intel+1;
@@ -239,6 +240,7 @@ public class sumController {
                         "\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
                 taDesc.setText(description);
+                break;
             }
 
             case "Bard":{
