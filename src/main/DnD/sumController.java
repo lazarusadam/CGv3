@@ -11,14 +11,14 @@ public class sumController {
     public TextField tfInt;
     public TextField tfWis;
     public TextField tfCha;
-    public TextArea taDesc;
+    public TextArea taRDesc;
+    public TextArea taCDesc;
     public Button btnAccept;
     public Button btnReset;
     public ImageView imgChar;
-    public TextField tfBonus;
 
-    String description = "";
-
+    String rDesc = "";
+    String cDesc = "";
 
 
     public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass) {
@@ -38,9 +38,8 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/dwarfsorc.jpg"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/dwarfwiz.png"));
                 }
-                tfBonus.setText("Constitution + 2");
                 con = con+2;
-                description = description + "Racial Information\n--------------------\nDarkvision: 60'\n" +
+                rDesc = rDesc + "Ability Bonus: Con + 2 \nDarkvision: 60'\n" +
                         "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -48,6 +47,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
+                taRDesc.setText(rDesc);
                 break;
             }
             case "Elf":{
@@ -65,9 +65,8 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/elfsorc.jpg"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/elfwiz.png"));
                 }
-                tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
-                description = description + "Racial Information\n--------------------\nDarkvision: 60'\n"+
+                rDesc = rDesc + "Ability Bonus: Dex + 2\nDarkvision: 60'\n"+
                 "Bonus to Save vs. Charm\nCannot be slept\nMeditate instead of sleep\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -75,6 +74,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
+                taRDesc.setText(rDesc);
                 break;
 
             }
@@ -93,9 +93,9 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/halfsorc.png"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/halfwizard.jpg"));
                 }
-                tfBonus.setText("Dexterity + 2");
+               // tfBonus.setText("Dexterity + 2");
                 dex = dex+2;
-                description = description + "Racial Information\n---------------------\n";
+               // description = description + "Racial Information\n---------------------\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -119,7 +119,7 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/humansorc.jpg"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/humanwizard.jpg"));
                 }
-                tfBonus.setText("All stats + 1");
+               // tfBonus.setText("All stats + 1");
                 str = str+1; dex = dex+1; con = con+1;
                 intel = intel+1; wis = wis+1; cha = cha+1;
                 tfStr.setText(Integer.toString(str));
@@ -145,7 +145,7 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/gnomesorc.png"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/gnomewizard.jpg"));
                 }
-                tfBonus.setText("Intelligence + 2");
+               // tfBonus.setText("Intelligence + 2");
                 intel = intel+2;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -170,7 +170,7 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/hesorc.png"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/hewizard.png"));
                 }
-                tfBonus.setText("Charisma + 2.  Two others + 1");
+               // tfBonus.setText("Charisma + 2.  Two others + 1");
                 cha = cha + 2;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -195,7 +195,7 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/hosorc.png"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/howizard.jpg"));
                 }
-                tfBonus.setText("Strength + 2.  Constitution + 1");
+               // tfBonus.setText("Strength + 2.  Constitution + 1");
                 str = str+2; con = con+1;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -220,7 +220,7 @@ public class sumController {
                     case "Sorcerer"->imgChar.setImage(new Image("main/DnD/classPics/sorcerers/tieflingsorc.png"));
                     case "Wizard"->imgChar.setImage(new Image("main/DnD/classPics/wizards/tieflingwizard.jpg"));
                 }
-                tfBonus.setText("Charisma + 2.  Intelligence + 1");
+               // tfBonus.setText("Charisma + 2.  Intelligence + 1");
                 cha = cha+2; intel = intel+1;
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -236,10 +236,10 @@ public class sumController {
                 Barbarian barb = new Barbarian();
                 barb.setHP(con);
                 Integer hp = barb.getHP();
-                description = description + "Class Information:\n--------------------\nPrimary Stat: Strength\n" +
+                cDesc = cDesc + "Primary Stat: Strength\n" +
                         "Starting Hit Points: "+ hp + "\n\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
-                taDesc.setText(description);
+                taCDesc.setText(cDesc);
                 break;
             }
 
@@ -248,19 +248,19 @@ public class sumController {
                 bard.setHP(con);
                 Integer hp = bard.getHP();
                 Integer insp = bard.getInsp(cha);
-                description = description + "Class Information\n--------------------\nPrimary Stat: Charisma\n" +
+                cDesc = cDesc + "Primary Stat: Charisma\n" +
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nBardic Inspiration: " + insp + " 1d6/day\n--Spellcasting--\n" +
                         "2 Cantrips & 4 Spells Known\n 2 1st Level Slots";
-                taDesc.setText(description);
+                taCDesc.setText(cDesc);
                 break;
             }
             case "Cleric":{
                 BCDMRW cleric = new BCDMRW();
                 cleric.setHP(con);
                 Integer hp = cleric.getHP();
-                description = description + "Class Information\n--------------------\nPrimary Stat: Wisdom\n" +
+                cDesc = cDesc + "Primary Stat: Wisdom\n" +
                     "Starting Hit Points: " + hp + "\nAbilities:\n";
-                taDesc.setText(description);
+                taCDesc.setText(cDesc);
                 break;
             }
             case "Druid":{}

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.DnD.sumController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.DnD.sumController">
    <children>
       <ImageView fitHeight="85.0" fitWidth="600.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -38,15 +38,24 @@
             <TextField fx:id="tfCha" />
          </children>
       </VBox>
-      <TextArea fx:id="taDesc" layoutX="400.0" layoutY="110.0" prefHeight="200.0" prefWidth="185.0" wrapText="true" />
-      <Label layoutX="237.0" layoutY="72.0" text="Character Summary">
+      <TextArea fx:id="taCDesc" layoutX="400.0" layoutY="269.0" prefHeight="82.0" prefWidth="186.0" wrapText="true" />
+      <Label layoutX="231.0" layoutY="73.0" text="Character Summary">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
       <Button fx:id="btnAccept" layoutX="114.0" layoutY="340.0" mnemonicParsing="false" text="Accept" />
-      <Button fx:id="btnReset" layoutX="434.0" layoutY="340.0" mnemonicParsing="false" text="Reset" />
-      <TextField fx:id="tfBonus" alignment="CENTER" layoutX="225.0" layoutY="337.0" prefHeight="26.0" prefWidth="174.0" />
-      <Label layoutX="278.0" layoutY="319.0" text="Racial Bonus" />
+      <Button fx:id="btnReset" layoutX="198.0" layoutY="340.0" mnemonicParsing="false" text="Reset" />
+      <TextArea fx:id="taRDesc" layoutX="400.0" layoutY="143.0" prefHeight="81.0" prefWidth="186.0" wrapText="true" />
+      <Label layoutX="427.0" layoutY="110.0" text="Racial Information">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="240.0" text="Class Information">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
