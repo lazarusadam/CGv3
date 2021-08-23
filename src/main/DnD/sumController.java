@@ -245,10 +245,14 @@ public class sumController {
 
             case "Bard":{
                 BCDMRW bard = new BCDMRW();
-                bard.setHP(con);
-                Integer hp = bard.getHP();
-                description = description + "Class information\n--------------------\n";
-                taDesc.setText(description);
+
+                    bard.setHP(con);
+                    Integer hp = bard.getHP();
+                    Integer insp = bard.getInsp(cha);
+                    description = description + "Class information\n--------------------\nStarting Hit Points: " + hp +
+                            "\nAbilities:\nBardic Inspiration: --Spellcasting--\n";
+                    taDesc.setText(description);
+
             }
             case "Cleric":{}
             case "Druid":{}

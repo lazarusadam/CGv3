@@ -153,4 +153,9 @@ public class BCDMRW implements ClassArchetype {
         }
 
     }
+
+    public Integer getInsp(int cha) {
+        Integer insp = 0;
+        return insp;
+    }
 }
