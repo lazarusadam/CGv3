@@ -250,7 +250,7 @@ public class sumController {
                 Integer insp = bard.getInsp(cha);
                 cDesc = cDesc + "Primary Stat: Charisma\n" +
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nBardic Inspiration: " + insp + " 1d6/day\n--Spellcasting--\n" +
-                        "2 Cantrips & 4 Spells Known\n 2 1st Level Slots";
+                        "2 Cantrips & 4 Spells Known\n2 1st Level Slots";
                 taCDesc.setText(cDesc);
                 break;
             }
