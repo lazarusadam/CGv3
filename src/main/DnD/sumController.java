@@ -278,7 +278,11 @@ public class sumController {
                 taCDesc.setText(cDesc);
                 break;
             }
-            case "Monk":{}
+            case "Monk":{
+                BCDMRW monk = new BCDMRW();
+                monk.setHP(con);
+                Integer hp = monk.getHP();
+            }
             case "Rogue":{}
             case "Warlock":{}
 
