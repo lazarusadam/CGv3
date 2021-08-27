@@ -156,7 +156,7 @@ public class BCDMRW implements ClassArchetype {
 
     /* Bardic Inspiration */
     /* Charisma is the key stat for bards.
-       This stat modifier shows how many ispiration dice
+       This stat modifier shows how many inspiration dice
        a bard has to spread amongst the party each day */
     public Integer getInsp(int cha) {
         return switch (cha) {
@@ -166,6 +166,22 @@ public class BCDMRW implements ClassArchetype {
             case 18, 19 -> 4;
             case 20 -> 5;
             default -> 0;
+        };
+    }
+
+    /* Cleric Spellcasting */
+    /* Wisdom is the key stat for clerics.
+       This stat modifier shows how many initial spells a
+       cleric may know from their spell list.  It is equal to
+       the cleric's level + their wisdom bonus modifier */
+    public Integer getSpells(int wis) {
+        return switch(wis){
+            case 12, 13 -> 2;
+            case 14, 15 -> 3;
+            case 16, 17 -> 4;
+            case 18, 19 -> 5;
+            case 20 -> 6;
+            default -> 1;
         };
     }
 }

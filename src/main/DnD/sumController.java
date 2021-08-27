@@ -258,8 +258,10 @@ public class sumController {
                 BCDMRW cleric = new BCDMRW();
                 cleric.setHP(con);
                 Integer hp = cleric.getHP();
+                Integer clerSpel = cleric.getSpells(wis);
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
-                    "Starting Hit Points: " + hp + "\nAbilities:\n";
+                    "Starting Hit Points: " + hp + "\nAbilities:\n--Spellcasting__\n" +
+                        "3 Cantrips & " + clerSpel + " Spells Known\n2 1st Level Slots";
                 taCDesc.setText(cDesc);
                 break;
             }
