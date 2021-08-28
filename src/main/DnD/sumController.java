@@ -293,6 +293,12 @@ public class sumController {
                 FPR fighter = new FPR();
                 fighter.setHP(con);
                 Integer hp = fighter.getHP();
+
+                cDesc = cDesc + "Primary Stat: Strength\n" +
+                        "Starting Hit Points: " + hp + "\nAbilities:\nSpecialized Fighting Style\n" +
+                        "Benefits based on style chosen\n  Archery - Defense - Dueling\n  Great Weapon Fighting\n" +
+                        "  Protection - 2-Weapon Fighting\nSecond Wind:\nRegain d10+lvl hp in combat\n  1/day";
+                taCDesc.setText(cDesc);
             }
             case "Paladin":{}
             case "Ranger":{}
