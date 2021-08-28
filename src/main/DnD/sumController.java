@@ -263,7 +263,7 @@ public class sumController {
                 Integer hp = cleric.getHP();
                 Integer clerSpel = cleric.getSpells(wis);
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
-                    "Starting Hit Points: " + hp + "\nAbilities:\n--Spellcasting__\n" +
+                    "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting__\n" +
                         "3 Cantrips & " + clerSpel + " Spells Known\n2 1st Level Spell Slots";
                 taCDesc.setText(cDesc);
                 break;
@@ -275,7 +275,7 @@ public class sumController {
                 Integer druSpel = druid.getSpells(wis);
 
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
-                        "Starting Hit Points: " + hp + "\nAbilities:\n--Spellcasting--\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting--\n" +
                         "2 Cantrips & " + druSpel + " Spells Known\n2 1st Level Spell Slots\n\n" +
                         "--Class Restriction--\nDruids will not wear armor\nmade of metal.";
                 taCDesc.setText(cDesc);
@@ -285,6 +285,14 @@ public class sumController {
                 BCDMRW monk = new BCDMRW();
                 monk.setHP(con);
                 Integer hp = monk.getHP();
+                Integer unAC = monk.getUnarmored(dex, wis);
+                cDesc = cDesc + "Primary Stat: Dexterity\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Martial Arts--\n" +
+                        "Use Dex as modifiers\nin combat instead of Str\nUnarmed Combat: 1d4 dmg\n" +
+                        " -can be a bonus action\nUnarmored Defense:" + unAC;
+                taCDesc.setText(cDesc);
+                break;
+
             }
             case "Rogue":{}
             case "Warlock":{}
@@ -295,10 +303,11 @@ public class sumController {
                 Integer hp = fighter.getHP();
 
                 cDesc = cDesc + "Primary Stat: Strength\n" +
-                        "Starting Hit Points: " + hp + "\nAbilities:\nSpecialized Fighting Style\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\nSpecialized Fighting Style\n" +
                         "Benefits based on style chosen\n  Archery - Defense - Dueling\n  Great Weapon Fighting\n" +
                         "  Protection - 2-Weapon Fighting\nSecond Wind:\nRegain d10+lvl hp in combat\n  1/day";
                 taCDesc.setText(cDesc);
+                break;
             }
             case "Paladin":{}
             case "Ranger":{}

@@ -186,4 +186,23 @@ public class BCDMRW implements ClassArchetype {
     }
 
 
+    public Integer getUnarmored(int dex, int wis) {
+        Integer dexMod = switch(dex){
+            case 12, 13 -> 1;
+            case 14, 15 -> 2;
+            case 16, 17 -> 3;
+            case 18, 19 -> 4;
+            case 20 -> 5;
+            default -> 0;
+        };
+        Integer wisMod = switch(wis){
+            case 12, 13 -> 1;
+            case 14, 15 -> 2;
+            case 16, 17 -> 3;
+            case 18, 19 -> 4;
+            case 20 -> 5;
+            default -> 0;
+        };
+        return 10 + dexMod + wisMod;
+    }
 }
