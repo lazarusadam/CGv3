@@ -169,11 +169,11 @@ public class BCDMRW implements ClassArchetype {
         };
     }
 
-    /* Cleric Spellcasting */
-    /* Wisdom is the key stat for clerics.
+    /* Cleric & Druid Spellcasting */
+    /* Wisdom is the key stat for clerics and druids.
        This stat modifier shows how many initial spells a
-       cleric may know from their spell list.  It is equal to
-       the cleric's level + their wisdom bonus modifier */
+       cleric/druid may know from their spell list.  It is equal to
+       the cleric's/druid's level + their wisdom bonus modifier */
     public Integer getSpells(int wis) {
         return switch(wis){
             case 12, 13 -> 2;
@@ -184,4 +184,6 @@ public class BCDMRW implements ClassArchetype {
             default -> 1;
         };
     }
+
+
 }

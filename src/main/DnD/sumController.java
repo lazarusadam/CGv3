@@ -253,7 +253,7 @@ public class sumController {
                 Integer insp = bard.getInsp(cha);
                 cDesc = cDesc + "Primary Stat: Charisma\n" +
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nBardic Inspiration: " + insp + " 1d6/day\n--Spellcasting--\n" +
-                        "2 Cantrips & 4 Spells Known\n2 1st Level Slots";
+                        "2 Cantrips & 4 Spells Known\n2 1st Level Spell Slots";
                 taCDesc.setText(cDesc);
                 break;
             }
@@ -264,7 +264,7 @@ public class sumController {
                 Integer clerSpel = cleric.getSpells(wis);
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
                     "Starting Hit Points: " + hp + "\nAbilities:\n--Spellcasting__\n" +
-                        "3 Cantrips & " + clerSpel + " Spells Known\n2 1st Level Slots";
+                        "3 Cantrips & " + clerSpel + " Spells Known\n2 1st Level Spell Slots";
                 taCDesc.setText(cDesc);
                 break;
             }
@@ -272,9 +272,12 @@ public class sumController {
                 BCDMRW druid = new BCDMRW();
                 druid.setHP(con);
                 Integer hp = druid.getHP();
+                Integer druSpel = druid.getSpells(wis);
 
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
-                        "Starting Hit Points: " + hp + "\nAbilities:\n";
+                        "Starting Hit Points: " + hp + "\nAbilities:\n--Spellcasting--\n" +
+                        "2 Cantrips & " + druSpel + " Spells Known\n2 1st Level Spell Slots\n\n" +
+                        "--Class Restriction--\nDruids will not wear armor\nmade of metal.";
                 taCDesc.setText(cDesc);
                 break;
             }
@@ -286,7 +289,11 @@ public class sumController {
             case "Rogue":{}
             case "Warlock":{}
 
-            case "Fighter":{}
+            case "Fighter":{
+                FPR fighter = new FPR();
+                fighter.setHP(con);
+                Integer hp = fighter.getHP();
+            }
             case "Paladin":{}
             case "Ranger":{}
 
