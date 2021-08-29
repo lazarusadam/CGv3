@@ -67,7 +67,7 @@ public class heBonus {
         Parent summaryScene = (Parent) loader.load();
 
         sumController sumControl = loader.getController();
-        sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
+        sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass, bonus1, bonus2);
 
         final Stage stage = new Stage();
         stage.getIcons().add(new Image("pictures/DnDBW.jpg"));

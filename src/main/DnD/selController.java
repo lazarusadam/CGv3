@@ -183,7 +183,7 @@ public class selController extends Application {
             Parent summaryScene = (Parent) loader.load();
 
             sumController sumControl = loader.getController();
-            sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass);
+            sumControl.dataIntegration(str, dex, con, intel, wis, cha, name, race, cClass,null, null);
 
             final Stage stage = new Stage();
             stage.getIcons().add(new Image("pictures/DnDBW.jpg"));

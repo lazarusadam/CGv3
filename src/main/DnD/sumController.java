@@ -21,7 +21,7 @@ public class sumController {
     String cDesc = "";
 
 
-    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass) {
+    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass,String hebonus1, String heBonus2) {
         switch (race) {
             case "Dwarf" -> {
                 switch (cClass) {
@@ -39,7 +39,7 @@ public class sumController {
                     case "Wizard" -> imgChar.setImage(new Image("main/DnD/classPics/wizards/dwarfwiz.png"));
                 }
                 con = con + 2;
-                rDesc = rDesc + "Ability Bonus: Con + 2 \nDarkvision: 60'\n" +
+                rDesc = rDesc + "Ability Bonus: Constitution + 2 \nDarkvision: 60'\n" +
                         "Tool proficiency: Smith's and Mason's tools\nIncreased resist to Poison\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -65,7 +65,7 @@ public class sumController {
                     case "Wizard" -> imgChar.setImage(new Image("main/DnD/classPics/wizards/elfwiz.png"));
                 }
                 dex = dex + 2;
-                rDesc = rDesc + "Ability Bonus: Dex + 2\nDarkvision: 60'\n" +
+                rDesc = rDesc + "Ability Bonus: Dexterity + 2\nDarkvision: 60'\n" +
                         "Bonus to Save vs. Charm\nCannot be slept\nMeditate instead of sleep\n\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
@@ -93,7 +93,7 @@ public class sumController {
                 }
 
                 dex = dex + 2;
-                rDesc = rDesc + "Ability Bonus: Dex + 2";
+                rDesc = rDesc + "Ability Bonus: Dexterity + 2";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -150,7 +150,7 @@ public class sumController {
                 }
 
                 intel = intel + 2;
-                rDesc = rDesc + "Ability Bonus: Int + 2";
+                rDesc = rDesc + "Ability Bonus: Intelligence + 2";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -174,8 +174,9 @@ public class sumController {
                     case "Sorcerer" -> imgChar.setImage(new Image("main/DnD/classPics/sorcerers/hesorc.png"));
                     case "Wizard" -> imgChar.setImage(new Image("main/DnD/classPics/wizards/hewizard.png"));
                 }
-                // tfBonus.setText("Charisma + 2.  Two others + 1");
+
                 cha = cha + 2;
+                rDesc = rDesc + "Ability Bonus: Charisma + 2, " + hebonus1 + " + 1, " + heBonus2 + " + 1 ";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -201,6 +202,7 @@ public class sumController {
                 // tfBonus.setText("Strength + 2.  Constitution + 1");
                 str = str + 2;
                 con = con + 1;
+                rDesc = rDesc + "Ability Bonus: Strength + 2, Constitution + 1";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -226,6 +228,7 @@ public class sumController {
                 // tfBonus.setText("Charisma + 2.  Intelligence + 1");
                 cha = cha + 2;
                 intel = intel + 1;
+                rDesc = rDesc + "Ability Bonus: Charisma + 2, Intelligence + 1";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
