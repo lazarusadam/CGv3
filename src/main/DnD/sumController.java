@@ -199,7 +199,7 @@ public class sumController {
                     case "Sorcerer" -> imgChar.setImage(new Image("main/DnD/classPics/sorcerers/hosorc.png"));
                     case "Wizard" -> imgChar.setImage(new Image("main/DnD/classPics/wizards/howizard.jpg"));
                 }
-                // tfBonus.setText("Strength + 2.  Constitution + 1");
+
                 str = str + 2;
                 con = con + 1;
                 rDesc = rDesc + "Ability Bonus: Strength + 2, Constitution + 1";
@@ -225,7 +225,7 @@ public class sumController {
                     case "Sorcerer" -> imgChar.setImage(new Image("main/DnD/classPics/sorcerers/tieflingsorc.png"));
                     case "Wizard" -> imgChar.setImage(new Image("main/DnD/classPics/wizards/tieflingwizard.jpg"));
                 }
-                // tfBonus.setText("Charisma + 2.  Intelligence + 1");
+
                 cha = cha + 2;
                 intel = intel + 1;
                 rDesc = rDesc + "Ability Bonus: Charisma + 2, Intelligence + 1";
