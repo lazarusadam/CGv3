@@ -47,7 +47,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
-                taRDesc.setText(rDesc);
+
             }
             case "Elf" -> {
                 switch (cClass) {
@@ -73,7 +73,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
-                taRDesc.setText(rDesc);
+
 
             }
             case "Halfling" -> {
@@ -100,7 +100,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
-                taRDesc.setText(rDesc);
+
             }
             case "Human" -> {
                 switch (cClass) {
@@ -131,7 +131,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
-                taRDesc.setText(rDesc);
+
             }
             case "Gnome" -> {
                 switch (cClass) {
@@ -157,7 +157,7 @@ public class sumController {
                 tfInt.setText(Integer.toString(intel));
                 tfWis.setText(Integer.toString(wis));
                 tfCha.setText(Integer.toString(cha));
-                taRDesc.setText(rDesc);
+
             }
             case "Half Elf" -> {
                 switch (cClass) {
@@ -234,19 +234,17 @@ public class sumController {
                 tfCha.setText(Integer.toString(cha));
             }
         }
-        switch (cClass){
-            case "Barbarian":{
+        switch (cClass) {
+            case "Barbarian" -> {
                 Barbarian barb = new Barbarian();
                 barb.setHP(con);
                 Integer hp = barb.getHP();
                 cDesc = cDesc + "Primary Stat: Strength\n" +
-                        "Starting Hit Points: "+ hp + "\n\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n" + "Rage: 2\nRage Dmg Bonus: +2\n" +
                         "Unarmored Combat AC: " + barb.unarmoredAC(con, dex);
-                taCDesc.setText(cDesc);
-                break;
-            }
 
-            case "Bard":{
+            }
+            case "Bard" -> {
                 BCDMRW bard = new BCDMRW();
                 bard.setHP(con);
                 Integer hp = bard.getHP();
@@ -254,21 +252,19 @@ public class sumController {
                 cDesc = cDesc + "Primary Stat: Charisma\n" +
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nBardic Inspiration: " + insp + " 1d6/day\n--Spellcasting--\n" +
                         "2 Cantrips & 4 Spells Known\n2 1st Level Spell Slots";
-                taCDesc.setText(cDesc);
-                break;
+
             }
-            case "Cleric":{
+            case "Cleric" -> {
                 BCDMRW cleric = new BCDMRW();
                 cleric.setHP(con);
                 Integer hp = cleric.getHP();
                 Integer clerSpel = cleric.getSpells(wis);
                 cDesc = cDesc + "Primary Stat: Wisdom\n" +
-                    "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting__\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting__\n" +
                         "3 Cantrips & " + clerSpel + " Spells Known\n2 1st Level Spell Slots";
-                taCDesc.setText(cDesc);
-                break;
+
             }
-            case "Druid":{
+            case "Druid" -> {
                 BCDMRW druid = new BCDMRW();
                 druid.setHP(con);
                 Integer hp = druid.getHP();
@@ -278,10 +274,9 @@ public class sumController {
                         "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting--\n" +
                         "2 Cantrips & " + druSpel + " Spells Known\n2 1st Level Spell Slots\n\n" +
                         "--Class Restriction--\nDruids will not wear armor\nmade of metal.";
-                taCDesc.setText(cDesc);
-                break;
+
             }
-            case "Monk":{
+            case "Monk" -> {
                 BCDMRW monk = new BCDMRW();
                 monk.setHP(con);
                 Integer hp = monk.getHP();
@@ -290,14 +285,23 @@ public class sumController {
                         "Starting Hit Points: " + hp + "\n\nAbilities:\n--Martial Arts--\n" +
                         "Use Dex as modifiers\nin combat instead of Str\nUnarmed Combat: 1d4 dmg\n" +
                         " -can be a bonus action\nUnarmored Defense:" + unAC;
-                taCDesc.setText(cDesc);
-                break;
 
             }
-            case "Rogue":{}
-            case "Warlock":{}
+            case "Rogue" -> {
+                BCDMRW rogue = new BCDMRW();
+                rogue.setHP(con);
+                Integer hp = rogue.getHP();
 
-            case "Fighter":{
+                cDesc = cDesc + "Primary Stat: Dexterity\n";
+            }
+            case "Warlock" -> {
+                BCDMRW lock = new BCDMRW();
+                lock.setHP(con);
+                Integer hp = lock.getHP();
+
+                cDesc = cDesc + "Primary Stat: \n";
+            }
+            case "Fighter" -> {
                 FPR fighter = new FPR();
                 fighter.setHP(con);
                 Integer hp = fighter.getHP();
@@ -306,15 +310,40 @@ public class sumController {
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nSpecialized Fighting Style\n" +
                         "Benefits based on style chosen\n  Archery - Defense - Dueling\n  Great Weapon Fighting\n" +
                         "  Protection - 2-Weapon Fighting\nSecond Wind:\nRegain d10+lvl hp in combat\n  1/day";
-                taCDesc.setText(cDesc);
-                break;
+
             }
-            case "Paladin":{}
-            case "Ranger":{}
+            case "Paladin" -> {
+                FPR paladin = new FPR();
+                paladin.setHP(con);
+                Integer hp = paladin.getHP();
 
-            case "Sorcerer":{}
-            case "Wizard":{}
+                cDesc = cDesc + "Primary Stat: Strength\n";
 
+            }
+            case "Ranger" -> {
+                FPR ranger = new FPR();
+                ranger.setHP(con);
+                Integer hp = ranger.getHP();
+
+                cDesc = cDesc + "Primary Stat: \n";
+
+            }
+            case "Sorcerer" -> {
+                SorcWiz sorc = new SorcWiz();
+                sorc.setHP(con);
+                Integer hp = sorc.getHP();
+
+                cDesc = cDesc + "Primary Stat: \n";
+            }
+            case "Wizard" -> {
+                SorcWiz wizard = new SorcWiz();
+                wizard.setHP(con);
+                Integer hp = wizard.getHP();
+
+                cDesc = cDesc + "Primary Stat: Intelligence\n";
+            }
         }
+        taRDesc.setText(rDesc);
+        taCDesc.setText(cDesc);
     }
 }
