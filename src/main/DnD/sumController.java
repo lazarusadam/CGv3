@@ -94,7 +94,8 @@ public class sumController {
                 }
 
                 dex = dex + 2;
-                rDesc = rDesc + "Ability Bonus: Dexterity + 2";
+                rDesc = rDesc + "Ability Bonus: Dexterity + 2\nLucky: 1 reroll of a 1 on a d20 attack roll.\n" +
+                        "Brave: Bonus to save against Fear";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -125,7 +126,7 @@ public class sumController {
                 intel = intel + 1;
                 wis = wis + 1;
                 cha = cha + 1;
-                rDesc = rDesc + "Ability Bonus: All Stats + 1";
+                rDesc = rDesc + "Ability Bonus: All Stats + 1\nNo other racial bonuses\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -151,7 +152,8 @@ public class sumController {
                 }
 
                 intel = intel + 2;
-                rDesc = rDesc + "Ability Bonus: Intelligence + 2";
+                rDesc = rDesc + "Ability Bonus: Intelligence + 2\nDarkvision: 60'\nGnome Cunning:\n" +
+                        "Bonus to all Wis, Int, and Cha saves against magic";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -177,7 +179,8 @@ public class sumController {
                 }
 
                 cha = cha + 2;
-                rDesc = rDesc + "Ability Bonus: Charisma + 2, " + hebonus1 + " + 1, " + heBonus2 + " + 1 ";
+                rDesc = rDesc + "Ability Bonus: Charisma + 2, " + hebonus1 + " + 1, " + heBonus2 + " + 1\n" +
+                        "Darkvision: 60'\nBonus against Charm\nCannot be put to sleep by magic";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -203,7 +206,10 @@ public class sumController {
 
                 str = str + 2;
                 con = con + 1;
-                rDesc = rDesc + "Ability Bonus: Strength + 2, Constitution + 1";
+                rDesc = rDesc + "Ability Bonus: Strength + 2, Constitution + 1\nDarkvision: 60'\n" +
+                        "Bonus Intimidation Skill\nRelentless Endurance: reduced to 1 hp instead of 0." +
+                        " 1/day\nSavage Attacks: can roll 1 additional damage die on a critical hit with" +
+                        " melee weapon\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -229,7 +235,7 @@ public class sumController {
 
                 cha = cha + 2;
                 intel = intel + 1;
-                rDesc = rDesc + "Ability Bonus: Charisma + 2, Intelligence + 1";
+                rDesc = rDesc + "Ability Bonus: Charisma + 2, Intelligence + 1\nDarkvision: 60'\nResist Fire Damage\n";
                 tfStr.setText(Integer.toString(str));
                 tfDex.setText(Integer.toString(dex));
                 tfCon.setText(Integer.toString(con));
@@ -306,7 +312,9 @@ public class sumController {
                 Integer hp = lock.getHP();
 
                 cDesc = cDesc + "Primary Stat: Charisma\n" +
-                        "Starting Hit Points: " + hp + "\n\nAbilities:\n";
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting--\n" +
+                        "2 Cantrips & 2 Spells Known\n1 Spell Slot\nOtherworldly Patron\n" +
+                        "Additional Benefits based on Patron choice.\n";
             }
             case "Fighter" -> {
                 FPR fighter = new FPR();
@@ -354,7 +362,9 @@ public class sumController {
                 wizard.setHP(con);
                 Integer hp = wizard.getHP();
 
-                cDesc = cDesc + "Primary Stat: Intelligence\n";
+                cDesc = cDesc + "Primary Stat: Intelligence\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting--\n" +
+                        "3 Cantrips Known\n2 1st Level Spell Slots\n";
             }
         }
         taRDesc.setText(rDesc);
