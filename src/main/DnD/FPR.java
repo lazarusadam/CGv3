@@ -153,4 +153,18 @@ public class FPR implements ClassArchetype {
         }
 
     }
+    /* Paladin Specialty */
+    /* A Paladin can sense strong evil around them like a
+       strong odor.  It can be used a number of times per day
+       depending upon the Paladin's charisma */
+    public Integer getDS(int cha) {
+        return switch(cha){
+            case 12, 13 -> 2;
+            case 14, 15 -> 3;
+            case 16, 17 -> 4;
+            case 18, 19 -> 5;
+            case 20 -> 6;
+            default -> 1;
+        };
+    }
 }

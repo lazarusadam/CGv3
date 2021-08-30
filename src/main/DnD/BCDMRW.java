@@ -185,7 +185,9 @@ public class BCDMRW implements ClassArchetype {
         };
     }
 
-
+    /* Monk Specialty */
+    /* A monk gains a bonus to their AC when wearing no
+       armor in combat. */
     public Integer getUnarmored(int dex, int wis) {
         Integer dexMod = switch(dex){
             case 12, 13 -> 1;

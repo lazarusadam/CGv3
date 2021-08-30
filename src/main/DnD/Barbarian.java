@@ -155,7 +155,7 @@ public class Barbarian implements ClassArchetype {
     }
 
     public Integer unarmoredAC(int con, int dex){
-        int uac; int moddex, modcon;
+        int moddex, modcon;
         switch (con){
             case 3 -> modcon = -4;
             case 4, 5 -> modcon = -3;
@@ -180,6 +180,6 @@ public class Barbarian implements ClassArchetype {
             case 20 -> moddex = 5;
             default -> moddex = 0;
         }
-        return uac = 10 + modcon + moddex;
+        return 10 + modcon + moddex;
     }
 }

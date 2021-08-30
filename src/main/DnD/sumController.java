@@ -1,5 +1,6 @@
 package main.DnD;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -295,14 +296,17 @@ public class sumController {
                 rogue.setHP(con);
                 Integer hp = rogue.getHP();
 
-                cDesc = cDesc + "Primary Stat: Dexterity\n";
+                cDesc = cDesc + "Primary Stat: Dexterity\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\nSneak Attack: 1d6 extra damage " +
+                        "to an enemy that is otherwise engaged.\n";
             }
             case "Warlock" -> {
                 BCDMRW lock = new BCDMRW();
                 lock.setHP(con);
                 Integer hp = lock.getHP();
 
-                cDesc = cDesc + "Primary Stat: \n";
+                cDesc = cDesc + "Primary Stat: Charisma\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n";
             }
             case "Fighter" -> {
                 FPR fighter = new FPR();
@@ -319,16 +323,20 @@ public class sumController {
                 FPR paladin = new FPR();
                 paladin.setHP(con);
                 Integer hp = paladin.getHP();
-
-                cDesc = cDesc + "Primary Stat: Strength\n";
-
+                Integer ds = paladin.getDS(cha);
+                cDesc = cDesc + "Primary Stat: Strength\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\nDivine Sense: 60' " +
+                        ds + " times per day\nLay on Hands: Heal 5 hp/day\n";
             }
             case "Ranger" -> {
                 FPR ranger = new FPR();
                 ranger.setHP(con);
                 Integer hp = ranger.getHP();
 
-                cDesc = cDesc + "Primary Stat: \n";
+                cDesc = cDesc + "Primary Stat: Dexterity or Strength\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\nFavored Enemy:" +
+                        "\nBonus to Survival Checks against one type of enemy\nNatural Explorer:" +
+                        "\nBonus to Ability Checks in one type of terrain\n";
 
             }
             case "Sorcerer" -> {
@@ -336,7 +344,10 @@ public class sumController {
                 sorc.setHP(con);
                 Integer hp = sorc.getHP();
 
-                cDesc = cDesc + "Primary Stat: \n";
+                cDesc = cDesc + "Primary Stat: Charisma\n" +
+                        "Starting Hit Points: " + hp + "\n\nAbilities:\n--Spellcasting--\n" +
+                        "4 Cantrips & 2 Spells Known\n2 1st Level Spell Slots\nSorcerous Origin:\n" +
+                        "Draconic or Wild";
             }
             case "Wizard" -> {
                 SorcWiz wizard = new SorcWiz();
@@ -348,5 +359,11 @@ public class sumController {
         }
         taRDesc.setText(rDesc);
         taCDesc.setText(cDesc);
+    }
+
+    public void acceptClicked(ActionEvent actionEvent) {
+    }
+
+    public void resetClicked(ActionEvent actionEvent) {
     }
 }
