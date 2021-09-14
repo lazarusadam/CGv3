@@ -372,6 +372,9 @@ public class sumController {
     }
 
     public void acceptClicked(ActionEvent actionEvent) {
+        String eventHandle;
+        eventHandle = actionEvent.getEventType().toString();
+
     }
 
     public void resetClicked(ActionEvent actionEvent) {
