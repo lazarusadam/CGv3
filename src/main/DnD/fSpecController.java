@@ -1,5 +1,6 @@
 package main.DnD;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 
 public class fSpecController {
@@ -11,11 +12,32 @@ public class fSpecController {
     public Button btn2WFighting;
 
     String specialization;
-    public void setSpec() {
-
-    }
 
     public String getSpec() {
         return specialization;
+    }
+
+    public void archery(ActionEvent actionEvent) {
+        specialization = "Archery";
+    }
+
+    public void defense(ActionEvent actionEvent) {
+        specialization = "Defense";
+    }
+
+    public void dueling(ActionEvent actionEvent) {
+        specialization = "Dueling";
+    }
+
+    public void gwFight(ActionEvent actionEvent) {
+        specialization = "Great Weapon";
+    }
+
+    public void prot(ActionEvent actionEvent) {
+        specialization = "Protection";
+    }
+
+    public void twoWeap(ActionEvent actionEvent) {
+        specialization = "2 Weapon";
     }
 }

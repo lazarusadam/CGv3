@@ -77,12 +77,12 @@
             <Image url="@specPics/two-weapon.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="btnArchery" mnemonicParsing="false" text="Select" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-      <Button fx:id="btnDefense" mnemonicParsing="false" text="Select" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-      <Button fx:id="btnDueling" mnemonicParsing="false" text="Select" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-      <Button fx:id="btnGWFighting" mnemonicParsing="false" text="Select" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-      <Button fx:id="btnProtection" mnemonicParsing="false" text="Select" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-      <Button fx:id="btn2WFighting" mnemonicParsing="false" text="Select" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btnArchery" mnemonicParsing="false" onAction="#archery" text="Select" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btnDefense" mnemonicParsing="false" onAction="#defense" text="Select" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btnDueling" mnemonicParsing="false" onAction="#dueling" text="Select" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btnGWFighting" mnemonicParsing="false" onAction="#gwFight" text="Select" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btnProtection" mnemonicParsing="false" onAction="#prot" text="Select" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Button fx:id="btn2WFighting" mnemonicParsing="false" onAction="#twoWeap" text="Select" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
       <Label text="Archery" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
       <Label text="Defense" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
       <Label text="Dueling" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
