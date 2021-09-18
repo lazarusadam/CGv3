@@ -15,12 +15,21 @@ Rulebook.  Also uses current version of the standard character sheets.
 Copyright their representative publishers.
 
 **COMPLETED FEATURES**
+System selection screen set to only D&D at the moment.
+Ability score rolling system set to 2 types
+  3d6 and 4d6 drop low
+    can reroll unwanted results or change roll system
+Ability Assignment screen complete
+  includes race and class selection along with a field to enter a name
+  
+  
+System Specific Updates
 -D&D
   Representative pictures for race and class combinations
   Racial bonuses applied to ability scores
   Race and Class Descriptions complete.
 
-Update listing
+Chronological update listing
 -----------------------------------------------------------------------------------------------------------
 **June 29, 2021**
 STARTING WITH DUNGEONS AND DRAGONS
@@ -75,3 +84,9 @@ CONTINUING WITH DUNGEONS AND DRAGONS
 Class Information for all classes complete.
 Racial Information for all races complete.
 Summary Screen features almost complete.
+
+**Septemeber 14,2021**
+CONTINUING WITH DUNGEONS AND DRAGONS
+Creating a Fighter Specialization Selection Screen.
+  - Framework complete.
+Summary Screen buttons not functional.
