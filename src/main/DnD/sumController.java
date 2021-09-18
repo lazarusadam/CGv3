@@ -20,9 +20,11 @@ public class sumController {
 
     String rDesc = "";
     String cDesc = "";
+    String cClass;
 
 
-    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass,String hebonus1, String heBonus2) {
+    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass, String hebonus1, String heBonus2) {
+        this.cClass = cClass;
         switch (race) {
             case "Dwarf" -> {
                 switch (cClass) {
@@ -374,6 +376,13 @@ public class sumController {
     public void acceptClicked(ActionEvent actionEvent) {
         String eventHandle;
         eventHandle = actionEvent.getEventType().toString();
+        if (cClass.equals("Fighter")){
+            fSpecController spec = new fSpecController();
+            spec.setSpec();
+            String fSpec = spec.getSpec();
+
+
+        }
 
     }
 
