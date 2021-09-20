@@ -90,3 +90,15 @@ CONTINUING WITH DUNGEONS AND DRAGONS
 Creating a Fighter Specialization Selection Screen.
   - Framework complete.
 Summary Screen buttons not functional.
+
+**September 20,2021**
+CONTINUING WITH DUNGEONS AND DRAGONS
+Working on Accept Button function from summary screen
+Fighter Specialization Screen near completion
+  - Intend to implement a confirmation
+Started on Character Sheet screen
+  - Including all class and racial information from summary screen
+    as part of the Features & Traits section of the sheet
+  - Have fields for name, race, class, ability scores, armor class, hit points, 
+    melee and ranged attack bonuses.
+
