@@ -3,6 +3,9 @@ package main.DnD;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+import java.lang.annotation.Inherited;
+import java.util.function.IntBinaryOperator;
+
 public class sheetController {
     // Ability Score Labels
     public Label strLabel;
@@ -27,7 +30,7 @@ public class sheetController {
     public TextArea taSkills;
 
 
-    public void diBarb(int str, int dex, int con, int intel, int wis, int cha, int hp, int ac, String name, String race) {
+    public void diBarb(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int special) {
         nameLabel.setText(name);
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -50,14 +53,36 @@ public class sheetController {
 
 
     }
-    public void diFighter(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String special) {
-        nameLabel.setText(name);
+    public void diFighter(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, String special) {
+        FPR fighter = new FPR();
+        int ac = 0;
+        fighter.setAC(dex);
+
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Fighter");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
         conLabel.setText(Integer.toString(con));
         intLabel.setText(Integer.toString(intel));
         wisLabel.setText(Integer.toString(wis));
         chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+
+
+
+        String skills;
+
+        skills = "CLASS BASED SKILLS\nSecond Wind:\n  d10+lvl -> 1/day\n" +
+                "Fighting Style:\n  ";
+        switch (special){
+            case "Archery":{ac = fighter.getAC(); break;}
+            case "Defense":{ac = fighter.getAC() + 1;break;}
+            case "Dueling":{ac = fighter.getAC();break;}
+            case "Great Weapon":{ac = fighter.getAC();break;}
+            case "Protection":{ac = fighter.getAC();break;}
+            case "2 Weapon":{ac = fighter.getAC();break;}
+        }
+
+        acLabel.setText(Integer.toString(ac));
 
 
         switch (race){
@@ -71,6 +96,29 @@ public class sheetController {
             case "Tiefling":{}
         }
 
+        taSkills.setText(skills);
 
+    }
+
+    public void diBard(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Bard");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+
+        switch (race){
+            case "Dwarf":{}
+            case "Elf":{}
+            case "Halfling":{}
+            case "Human":{}
+            case "Gnome":{}
+            case "Half Elf":{}
+            case "Half Orc":{}
+            case "Tiefling":{}
+        }
     }
 }
