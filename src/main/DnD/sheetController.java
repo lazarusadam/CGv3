@@ -124,4 +124,7 @@ public class sheetController {
 
     public void diCleric(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
     }
+
+    public void diDruid(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
+    }
 }

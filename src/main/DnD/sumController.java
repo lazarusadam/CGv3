@@ -403,6 +403,10 @@ public class sumController {
                 sheet.diCleric(str, dex, con, intel, wis, cha, hp, name, race, spells);
                 break;
             }
+            case "Druid":{
+                sheet.diDruid(str, dex, con, intel, wis, cha, hp, name, race, spells);
+                break;
+            }
         }
 
     }
