@@ -383,22 +383,25 @@ public class sumController {
     public void acceptClicked(ActionEvent actionEvent) {
         String eventHandle;
         eventHandle = actionEvent.getEventType().toString();
+        sheetController sheet = new sheetController();
         switch (cClass){
             case "Fighter": {
                 fSpecController spec = new fSpecController();
                 String special = spec.getSpec();
-                sheetController sheet = new sheetController();
                 sheet.diFighter(str, dex, con, intel, wis, cha, hp, name, race, special);
                 break;
             }
             case "Barbarian":{
-                sheetController sheet = new sheetController();
                 sheet.diBarb(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
                 break;
             }
             case "Bard":{
-                sheetController sheet = new sheetController();
                 sheet.diBard(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+                break;
+            }
+            case "Cleric":{
+                sheet.diCleric(str, dex, con, intel, wis, cha, hp, name, race, spells);
+                break;
             }
         }
 

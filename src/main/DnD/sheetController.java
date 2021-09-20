@@ -31,7 +31,7 @@ public class sheetController {
 
 
     public void diBarb(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int special) {
-        nameLabel.setText(name);
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Barbarian");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
         conLabel.setText(Integer.toString(con));
@@ -120,5 +120,8 @@ public class sheetController {
             case "Half Orc":{}
             case "Tiefling":{}
         }
+    }
+
+    public void diCleric(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
     }
 }
