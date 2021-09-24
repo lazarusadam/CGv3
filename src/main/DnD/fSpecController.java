@@ -2,6 +2,7 @@ package main.DnD;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class fSpecController {
     public Button btnArchery;
@@ -12,6 +13,7 @@ public class fSpecController {
     public Button btn2WFighting;
 
     String specialization;
+    String eventHandle;
 
     public String getSpec() {
         return specialization;
@@ -19,6 +21,11 @@ public class fSpecController {
 
     public void archery(ActionEvent actionEvent) {
         specialization = "Archery";
+        eventHandle = actionEvent.getEventType().toString();
+        if("ACTION".equals(eventHandle)){
+            final Stage stage = (Stage) btnArchery.getScene().getWindow();
+            stage.close();
+        }
     }
 
     public void defense(ActionEvent actionEvent) {

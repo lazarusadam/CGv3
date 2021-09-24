@@ -43,8 +43,8 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnAccept" layoutX="114.0" layoutY="340.0" mnemonicParsing="false" text="Accept" />
-      <Button fx:id="btnReset" layoutX="198.0" layoutY="340.0" mnemonicParsing="false" text="Reset" />
+      <Button fx:id="btnAccept" layoutX="114.0" layoutY="340.0" mnemonicParsing="false" onAction="#acceptClicked" text="Accept" />
+      <Button fx:id="btnReset" layoutX="198.0" layoutY="340.0" mnemonicParsing="false" onAction="#resetClicked" text="Reset" />
       <Label layoutX="427.0" layoutY="110.0" text="Racial Information">
          <font>
             <Font name="System Bold" size="15.0" />

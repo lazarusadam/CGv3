@@ -72,11 +72,11 @@ public class sheetController {
         String skills;
 
         skills = "CLASS BASED SKILLS\nSecond Wind:\n  d10+lvl -> 1/day\n" +
-                "Fighting Style:\n  ";
+                "Fighting Style: ";
         switch (special){
-            case "Archery":{ac = fighter.getAC(); break;}
-            case "Defense":{ac = fighter.getAC() + 1;break;}
-            case "Dueling":{ac = fighter.getAC();break;}
+            case "Archery":{ac = fighter.getAC(); skills = skills + "Archery\n  +2 to Ranged Attack Rolls.\n"; break;}
+            case "Defense":{ac = fighter.getAC() + 1; skills = skills + "Defense\n  +1 AC when wearing armor.\n"; break;}
+            case "Dueling":{ac = fighter.getAC(); skills = skills + "Dueling\n  +2 dmg when wielding\n  a single 1H weapon.\n"; break;}
             case "Great Weapon":{ac = fighter.getAC();break;}
             case "Protection":{ac = fighter.getAC();break;}
             case "2 Weapon":{ac = fighter.getAC();break;}
@@ -123,8 +123,79 @@ public class sheetController {
     }
 
     public void diCleric(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Cleric");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
     }
 
     public void diDruid(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Druid");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+    }
+
+    public void diMonk(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Monk");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+    }
+
+    public void diPala(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Paladin");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+    }
+
+    public void diSorc(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Sorcerer");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+    }
+
+    public void diLock(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Warlock");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
+    }
+
+    public void diWizard(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+        nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Wizard");
+        strLabel.setText(Integer.toString(str));
+        dexLabel.setText(Integer.toString(dex));
+        conLabel.setText(Integer.toString(con));
+        intLabel.setText(Integer.toString(intel));
+        wisLabel.setText(Integer.toString(wis));
+        chaLabel.setText(Integer.toString(cha));
+        hpLabel.setText(Integer.toString(hp));
     }
 }

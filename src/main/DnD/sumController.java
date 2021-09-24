@@ -1,9 +1,15 @@
 package main.DnD;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class sumController {
     public TextField tfStr;
@@ -380,32 +386,55 @@ public class sumController {
         taCDesc.setText(cDesc);
     }
 
-    public void acceptClicked(ActionEvent actionEvent) {
+    public void acceptClicked(ActionEvent actionEvent) throws IOException {
         String eventHandle;
+
         eventHandle = actionEvent.getEventType().toString();
         sheetController sheet = new sheetController();
-        switch (cClass){
-            case "Fighter": {
+        if (cClass.equals("Fighter")){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fighterspec.fxml"));
+            Parent fsScene = (Parent) loader.load();
+
+            final Stage stage = new Stage();
+            stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
+            stage.setHeight(500);
+            stage.setWidth(600);
+            stage.setScene(new Scene(fsScene));
+            stage.show();
+
+        }
+        switch (cClass) {
+            case "Fighter" -> {
                 fSpecController spec = new fSpecController();
                 String special = spec.getSpec();
                 sheet.diFighter(str, dex, con, intel, wis, cha, hp, name, race, special);
-                break;
             }
-            case "Barbarian":{
+            case "Barbarian" -> {
                 sheet.diBarb(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
-                break;
             }
-            case "Bard":{
+            case "Bard" -> {
                 sheet.diBard(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
-                break;
             }
-            case "Cleric":{
+            case "Cleric" -> {
                 sheet.diCleric(str, dex, con, intel, wis, cha, hp, name, race, spells);
-                break;
             }
-            case "Druid":{
+            case "Druid" -> {
                 sheet.diDruid(str, dex, con, intel, wis, cha, hp, name, race, spells);
-                break;
+            }
+            case "Monk" -> {
+                sheet.diMonk(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+            }
+            case "Paladin" -> {
+                sheet.diPala(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+            }
+            case "Sorcerer" -> {
+                sheet.diSorc(str, dex, con, intel, wis, cha, hp, name, race);
+            }
+            case "Warlock" -> {
+                sheet.diLock(str, dex, con, intel, wis, cha, hp, name, race);
+            }
+            case "Wizard" -> {
+                sheet.diWizard(str, dex, con, intel, wis, cha, hp, name, race);
             }
         }
 
