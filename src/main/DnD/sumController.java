@@ -27,12 +27,13 @@ public class sumController {
     String rDesc = "";
     String cDesc = "";
     String cClass;
-    String name, race;
+    String name = "";
+    String race;
     int str, dex, con, intel, wis, cha, hp;
     int specialAbility;
     int spells;
 
-    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass, String hebonus1, String heBonus2) {
+    public void dataIntegration(int str, int dex, int con, int intel, int wis, int cha, String name, String race, String cClass, String hebonus1, String heBonus2) throws IOException {
         this.cClass = cClass;
         this.name = name;
         this.race = race;
@@ -336,6 +337,17 @@ public class sumController {
                 fighter.setHP(con);
                 hp = fighter.getHP();
 
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("fighterspec.fxml"));
+                Parent fsScene = (Parent) loader.load();
+
+                final Stage stage = new Stage();
+                stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
+                stage.setHeight(500);
+                stage.setWidth(600);
+                stage.setScene(new Scene(fsScene));
+                stage.show();
+
+
                 cDesc = cDesc + "Primary Stat: Strength\n" +
                         "Starting Hit Points: " + hp + "\n\nAbilities:\nSpecialized Fighting Style\n" +
                         "Benefits based on style chosen\n  Archery - Defense - Dueling\n  Great Weapon Fighting\n" +
@@ -386,23 +398,12 @@ public class sumController {
         taCDesc.setText(cDesc);
     }
 
-    public void acceptClicked(ActionEvent actionEvent) throws IOException {
+    public void acceptClicked(ActionEvent actionEvent){
         String eventHandle;
 
         eventHandle = actionEvent.getEventType().toString();
         sheetController sheet = new sheetController();
-        if (cClass.equals("Fighter")){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("fighterspec.fxml"));
-            Parent fsScene = (Parent) loader.load();
 
-            final Stage stage = new Stage();
-            stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-            stage.setHeight(500);
-            stage.setWidth(600);
-            stage.setScene(new Scene(fsScene));
-            stage.show();
-
-        }
         switch (cClass) {
             case "Fighter" -> {
                 fSpecController spec = new fSpecController();

@@ -1,5 +1,6 @@
 package main.DnD;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
@@ -8,25 +9,39 @@ import java.util.function.IntBinaryOperator;
 
 public class sheetController {
     // Ability Score Labels
+    @FXML
     public Label strLabel;
+    @FXML
     public Label dexLabel;
+    @FXML
     public Label conLabel;
+    @FXML
     public Label intLabel;
+    @FXML
     public Label wisLabel;
+    @FXML
     public Label chaLabel;
 
     // Characteristic Labels
+    @FXML
     public Label nameLabel;
+    @FXML
     public Label raceLabel;
+    @FXML
     public Label classLabel;
 
     // Derived Stat Labels
+    @FXML
     public Label acLabel;
+    @FXML
     public Label hpLabel;
+    @FXML
     public Label meleeLabel;
+    @FXML
     public Label rngLabel;
 
     // Skills Panel
+    @FXML
     public TextArea taSkills;
 
 
