@@ -4,8 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-import java.lang.annotation.Inherited;
-import java.util.function.IntBinaryOperator;
 
 public class sheetController {
     // Ability Score Labels
