@@ -22,6 +22,9 @@ Ability score rolling system set to 2 types
 Ability Assignment screen complete
   includes race and class selection along with a field to enter a name
   
+**Bugs**
+Sept. 25, 2021
+  Labels being thrown a NullPointer.  Attempting to fix
   
 System Specific Updates
 -D&D
@@ -102,3 +105,9 @@ Started on Character Sheet screen
   - Have fields for name, race, class, ability scores, armor class, hit points, 
     melee and ranged attack bonuses.
 
+**September 25,2021**
+CONTINUING WITH DUNGEONS AND DRAGONS
+Working on Accept Button functionality.
+Fighter Specialization Screen completed, however trying to find the best way to implement.
+Character Sheet screen throwing an error regarding label population
+  - Working on that.
