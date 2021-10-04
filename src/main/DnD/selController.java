@@ -177,6 +177,17 @@ public class selController extends Application {
             stage.setScene(new Scene(heScene));
             stage.show();
         }
+        else if (cClass.equals("Fighter")){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fighterspec.fxml"));
+            Parent fsScene = (Parent) loader.load();
+
+            final Stage stage = new Stage();
+            stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
+            stage.setHeight(500);
+            stage.setWidth(600);
+            stage.setScene(new Scene(fsScene));
+            stage.show();
+        }
         else {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("summary.fxml"));

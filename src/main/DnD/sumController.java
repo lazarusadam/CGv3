@@ -337,15 +337,7 @@ public class sumController {
                 fighter.setHP(con);
                 hp = fighter.getHP();
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("fighterspec.fxml"));
-                Parent fsScene = (Parent) loader.load();
 
-                final Stage stage = new Stage();
-                stage.getIcons().add(new Image("pictures/DnDBW.jpg"));
-                stage.setHeight(500);
-                stage.setWidth(600);
-                stage.setScene(new Scene(fsScene));
-                stage.show();
 
 
                 cDesc = cDesc + "Primary Stat: Strength\n" +
@@ -398,44 +390,48 @@ public class sumController {
         taCDesc.setText(cDesc);
     }
 
-    public void acceptClicked(ActionEvent actionEvent){
-        String eventHandle;
-
-        eventHandle = actionEvent.getEventType().toString();
-        sheetController sheet = new sheetController();
+    public void acceptClicked(ActionEvent actionEvent) throws IOException{
+        int s, d, co, i, w, ch, hit; String n, r;
+        s = str; i = intel; n = name;
+        d = dex; w = wis; r = race;
+        co = con; ch = cha; hit = hp;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("charsheet.fxml"));
+        Parent csScene = (Parent) loader.load();
+        sheetController sheet = loader.getController();
 
         switch (cClass) {
             case "Fighter" -> {
                 fSpecController spec = new fSpecController();
                 String special = spec.getSpec();
-                sheet.diFighter(str, dex, con, intel, wis, cha, hp, name, race, special);
+                System.out.println(special);
+                sheet.diFighter(s, d, co, i, w, ch, n, r, hit, special);
             }
             case "Barbarian" -> {
-                sheet.diBarb(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+                sheet.diBarb(s, d, co, i, w, ch, n, r, hit, specialAbility);
             }
             case "Bard" -> {
-                sheet.diBard(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+                sheet.diBard(s, d, co, i, w, ch, n, r, hit, specialAbility);
             }
             case "Cleric" -> {
-                sheet.diCleric(str, dex, con, intel, wis, cha, hp, name, race, spells);
+                sheet.diCleric(s, d, co, i, w, ch, n, r, hit, spells);
             }
             case "Druid" -> {
-                sheet.diDruid(str, dex, con, intel, wis, cha, hp, name, race, spells);
+                sheet.diDruid(s, d, co, i, w, ch, n, r, hit, spells);
             }
             case "Monk" -> {
-                sheet.diMonk(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+                sheet.diMonk(s, d, co, i, w, ch, n, r, hit, specialAbility);
             }
             case "Paladin" -> {
-                sheet.diPala(str, dex, con, intel, wis, cha, hp, name, race, specialAbility);
+                sheet.diPala(s, d, co, i, w, ch, n, r, hit, specialAbility);
             }
             case "Sorcerer" -> {
-                sheet.diSorc(str, dex, con, intel, wis, cha, hp, name, race);
+                sheet.diSorc(s, d, co, i, w, ch, n, r, hit);
             }
             case "Warlock" -> {
-                sheet.diLock(str, dex, con, intel, wis, cha, hp, name, race);
+                sheet.diLock(s, d, co, i, w, ch, n, r, hit);
             }
             case "Wizard" -> {
-                sheet.diWizard(str, dex, con, intel, wis, cha, hp, name, race);
+                sheet.diWizard(s, d, co, i, w, ch, n, r, hit);
             }
         }
 

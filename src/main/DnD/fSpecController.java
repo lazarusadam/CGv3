@@ -12,7 +12,7 @@ public class fSpecController {
     public Button btnProtection;
     public Button btn2WFighting;
 
-    String specialization;
+    String specialization = "";
     String eventHandle;
 
     public String getSpec() {

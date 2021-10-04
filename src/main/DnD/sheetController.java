@@ -43,7 +43,7 @@ public class sheetController {
     public TextArea taSkills;
 
 
-    public void diBarb(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int special) {
+    public void diBarb(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp, int special) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Barbarian");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -66,7 +66,7 @@ public class sheetController {
 
 
     }
-    public void diFighter(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, String special) {
+    public void diFighter(int str, int dex, int con, int intel, int wis, int cha,  String name, String race, int hp, String special) {
         FPR fighter = new FPR();
         int ac = 0;
         fighter.setAC(dex);
@@ -86,13 +86,31 @@ public class sheetController {
 
         skills = "CLASS BASED SKILLS\nSecond Wind:\n  d10+lvl -> 1/day\n" +
                 "Fighting Style: ";
-        switch (special){
-            case "Archery":{ac = fighter.getAC(); skills = skills + "Archery\n  +2 to Ranged Attack Rolls.\n"; break;}
-            case "Defense":{ac = fighter.getAC() + 1; skills = skills + "Defense\n  +1 AC when wearing armor.\n"; break;}
-            case "Dueling":{ac = fighter.getAC(); skills = skills + "Dueling\n  +2 dmg when wielding\n  a single 1H weapon.\n"; break;}
-            case "Great Weapon":{ac = fighter.getAC();break;}
-            case "Protection":{ac = fighter.getAC();break;}
-            case "2 Weapon":{ac = fighter.getAC();break;}
+        switch (special) {
+            case "Archery" -> {
+                ac = fighter.getAC();
+                skills = skills + "Archery\n  +2 to Ranged Attack Rolls.\n";
+            }
+            case "Defense" -> {
+                ac = fighter.getAC() + 1;
+                skills = skills + "Defense\n  +1 AC when wearing armor.\n";
+            }
+            case "Dueling" -> {
+                ac = fighter.getAC();
+                skills = skills + "Dueling\n  +2 dmg when wielding\n  a single 1H weapon.\n";
+            }
+            case "Great Weapon" -> {
+                ac = fighter.getAC();
+            }
+            case "Protection" -> {
+                ac = fighter.getAC();
+            }
+            case "2 Weapon" -> {
+                ac = fighter.getAC();
+            }
+            default ->{
+                ac = fighter.getAC();
+            }
         }
 
         acLabel.setText(Integer.toString(ac));
@@ -113,7 +131,7 @@ public class sheetController {
 
     }
 
-    public void diBard(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+    public void diBard(int str, int dex, int con, int intel, int wis, int cha,  String name, String race, int hp, int specialAbility) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Bard");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -135,7 +153,7 @@ public class sheetController {
         }
     }
 
-    public void diCleric(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
+    public void diCleric(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp, int spells) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Cleric");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -146,7 +164,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diDruid(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int spells) {
+    public void diDruid(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp, int spells) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Druid");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -157,7 +175,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diMonk(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+    public void diMonk(int str, int dex, int con, int intel, int wis, int cha, String name, String race,int hp, int specialAbility) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Monk");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -168,7 +186,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diPala(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race, int specialAbility) {
+    public void diPala(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp, int specialAbility) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Paladin");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -179,7 +197,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diSorc(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+    public void diSorc(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Sorcerer");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -190,7 +208,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diLock(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+    public void diLock(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Warlock");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
@@ -201,7 +219,7 @@ public class sheetController {
         hpLabel.setText(Integer.toString(hp));
     }
 
-    public void diWizard(int str, int dex, int con, int intel, int wis, int cha, int hp, String name, String race) {
+    public void diWizard(int str, int dex, int con, int intel, int wis, int cha, String name, String race, int hp) {
         nameLabel.setText(name); raceLabel.setText(race); classLabel.setText("Wizard");
         strLabel.setText(Integer.toString(str));
         dexLabel.setText(Integer.toString(dex));
